@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/06 04:55:12 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 05:41:18 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+void	ft_swap(int *a, int *b)
 {
-	*nbr = 42;
+	int		temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
 int	main(void)
 {
-	int		*ptr;
+	int		*a;
+	int		*b;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
-	return (0);
+	*a = 1;
+	*b = 2;
+	ft_swap(a, b);
+	printf("a = %d, b = %d",*a, *b);
 }

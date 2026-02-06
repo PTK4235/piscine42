@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/06 05:16:34 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 05:49:53 by ptk              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+void	ft_putstr(char *str)
 {
-	*nbr = 42;
+	write(1, str, sizeof(str) + 1);
 }
 
-int	main(void)
+int	main(int argc, char const *argv[])
 {
-	int		*ptr;
+	char	*str;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
+	str = "test";
+	ft_putstr(str);
 	return (0);
 }

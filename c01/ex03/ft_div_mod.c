@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/06 05:02:18 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 05:08:45 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*nbr = 42;
+	*div = a / b;
+	*mod = a % b;
 }
 
-int	main(void)
+int	main(int argc, char const *argv[])
 {
-	int		*ptr;
+	int		*div;
+	int		*mod;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
+	ft_div_mod(10, 3, div, mod);
+	printf("*div = %d, *mod = %d",*div,*mod);
 	return (0);
 }

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/05 12:16:05 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 05:40:31 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
-	*nbr = 42;
+	*********nbr = 42;
 }
 
-int	main(void)
+int	main(int argc, char const *argv[])
 {
-	int		*ptr;
+	int		*********nbr;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
+	ft_ultimate_ft(nbr);
+	printf(*********nbr);
 	return (0);
 }

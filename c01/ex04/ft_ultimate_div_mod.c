@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/06 05:09:43 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 05:15:55 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*nbr = 42;
+	int		div;
+	int		mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
 }
 
-int	main(void)
+int	main(int argc, char const *argv[])
 {
-	int		*ptr;
+	int		*a;
+	int		*b;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
+	*a = 10;
+	*b = 3;
+	ft_ultimate_div_mod(a, b);
+	printf("*a = %d, *b = %d",*a,*b);
 	return (0);
 }

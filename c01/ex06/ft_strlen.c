@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptk <ptran@student.42belgium.be>           +#+  +:+       +#+        */
+/*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/05 11:49:22 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/05 11:56:46 by ptk              ###   ########.fr       */
+/*   Created: 2026/02/06 05:50:53 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/06 06:44:56 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_ft(int *nbr)
+int	ft_strlen(char *str)
 {
-	*nbr = 42;
+	int		ctr;
+
+	ctr = 0;
+	while (str[ctr] != '\0')
+	{
+		ctr++;
+	}
+	return (ctr);
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	int		*ptr;
+	char	*str;
 
-	ft_ft(ptr);
-	printf("%d",*ptr);
+	str = "test";
+	printf("%d", ft_strlen(str));
 	return (0);
 }
