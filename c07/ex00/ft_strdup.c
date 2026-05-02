@@ -1,44 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ptran <ptran@student.42belgium.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 20:04:12 by ptk               #+#    #+#             */
-/*   Updated: 2026/02/26 13:44:03 by ptran            ###   ########.fr       */
+/*   Created: 2026/02/20 11:42:58 by ptran             #+#    #+#             */
+/*   Updated: 2026/02/26 13:44:12 by ptran            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	*ft_range(int min, int max)
+char	*ft_strdup(char *src);
+
+char	*ft_strdup(char *src)
 {
-	int				*ret;
-	int				i;
-	long long		range;
+	char	*ret;
+	int		i;
 
 	i = 0;
-	if (min >= max)
-		return (NULL);
-	range = (long long) max - (long long) min;
-	if (range < 0)
-		range = -range;
-	ret = malloc(sizeof (int) * range);
+	while (src[i])
+		i++;
+	ret = malloc(sizeof(char) * i + 1);
 	if (ret == NULL)
-		return (ret);
-	while (min < max)
-		ret[i++] = min++;
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		ret[i] = src[i];
+		i++;
+	}
+	ret[i] = '\0';
 	return (ret);
 }
 /*
 #include <stdio.h>
-int main (void)
+int main(void)
 {
-	int* test = ft_range(-10,-3);
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d\n", test[i]);
-	}
-	return (1);
+	char *test;
+	char str[] = "abcd";
+	
+	test = ft_strdup(str);
+	printf("%s\n", test);
 }*/
